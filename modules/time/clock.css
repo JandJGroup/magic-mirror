@@ -1,7 +1,44 @@
 html {
-  background-color: #000;
+  background-color: #000000;
 }
 
+@font-face {
+  font-family: 'SamsungSharp';
+  src: url('./fonts/SamsungSharpSansRg.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/SamsungSharpSansRg.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+.digitalClock {
+	height: 330px;
+	font-size: 330px;
+	color: white;
+	font-family:"SamsungSharp", Fallback, sans-serif;
+	display: inline-block;
+	margin-left: 0.1em; 
+}
+
+.digitalHour {
+	font-size: 100%;
+	display: inline-block;
+}
+
+.digitalMinute {
+	font-size: 50%;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+.digitalPostM {
+	font-size: 15%;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+.digitalSecond {
+	font-size: 25%;
+	display: inline-block;
+	vertical-align: text-top;
+}
 
 .circle {
   width: 240px;
@@ -11,6 +48,7 @@ html {
   border-radius: 50%;
   background-size: 240px 240px;
   background-repeat: no-repeat;
+  display: inline-block;
 }
 
 .face {

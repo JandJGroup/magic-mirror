@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Time } from './time';
+import { Time } from './modules/time/time';
 
 const master = {
   time: Time,

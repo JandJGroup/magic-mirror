@@ -1,12 +1,13 @@
 import React from 'react';
 import {AnalogClock} from './AnalogClock';
+import {DigitalClock} from "./DigitalClock";
 
 const Time = React.createClass({
   render() {
     return (
       <div>
-        <h2> {(new Date()).toString()} </h2>
-        <AnalogClock />
+        <AnalogClock/>
+        <DigitalClock/>
         </div>
     );
   }
