@@ -5,10 +5,10 @@ import {DigitalClock} from "./DigitalClock";
 const Time = React.createClass({
   render() {
     return (
-      <div>
-        <AnalogClock/>
-        <DigitalClock/>
-        </div>
+      <div style={{position: "absolute", left: this.props.position.x, top: this.props.position.y,}}>
+        <AnalogClock />
+        <DigitalClock />
+      </div>
     );
   }
 });

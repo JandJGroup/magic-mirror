@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Time } from './modules/time/time';
+import { Wave } from './modules/wave/wave';
 
 const master = {
   time: Time,
+  wave: Wave,
 };
 
 
@@ -24,6 +26,15 @@ const App = React.createClass({
             y: 50,
           },
           tz: "est",
+        },
+        {
+          key: "wave",
+          position: {
+            x: 0,
+            y: 1000,
+            height: 300
+            
+          }
         }
 
 
@@ -33,7 +44,8 @@ const App = React.createClass({
 
   render() {
     const toRenderCompons = this.state.components && this.state.components.map((comp, idx) => {
-      return React.createElement(master[comp.key], {key: idx, position: comp.position}) ;
+      const Component = master[comp.key];
+      return <Component key={idx} position={comp.position} />;
     });
     return (
       <div>
