@@ -4,8 +4,7 @@ html {
 
 @font-face {
   font-family: 'SamsungSharp';
-  src: url('./fonts/SamsungSharpSansRg.woff') format('woff'), /* Pretty Modern Browsers */
-       url('./fonts/SamsungSharpSansRg.ttf')  format('truetype') /* Safari, Android, iOS */
+  src: url('./fonts/SamsungSharpSansRg.ttf')  format('truetype') /* Safari, Android, iOS */
 }
 
 .digitalClock {
