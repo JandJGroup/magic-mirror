@@ -9,7 +9,7 @@ var ClockFace = React.createClass({
     var hour = ((d.getHours() % 12) / 12) * 360 + 90 + minute / 12;
 
     return (
-      <div className="circle">
+      <div className="circle"  style={{height: 240 * this.props.scale, width: 240* this.props.scale}}>
         <div className="face">
           <div className="second" style={transform(rotate(second))} />
           <div className="hour" style={transform(rotate(hour))} />
@@ -43,7 +43,7 @@ var AnalogClock = React.createClass({
     }());
   },
   render: function() {
-    return <ClockFace date={this.state.date} />;
+    return <ClockFace date={this.state.date} scale={this.props.scale}/>;
   }
 });
 
