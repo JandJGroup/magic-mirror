@@ -9,13 +9,11 @@ var DigitalClockFace = React.createClass({
 		var minuteZero = (minute <= 9) ? "0" : ""; // Add a zero in front of single digit numbers
 		var hour = d.getHours(); // Get hour number;
 		var postm = (hour >= 12) ? "PM" : "AM";
-
 		// this has to be done after postm calculation
+		hour %= 12; // Convert to 12 12 hour format
 		if (hour === 0) {
 			hour = 12;
 		}
-		hour %= 12; // Convert to 12 12 hour format
-		console.log(this.props);
 		return (
 			<div className="digitalClock" style={{ height: 330 * this.props.scale, fontSize: 330 * this.props.scale }}>
 				<div className="digitalHour">{hour}</div>
